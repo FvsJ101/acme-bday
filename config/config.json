@@ -1,0 +1,4 @@
+{
+  "baseUrl" : "https://eohmc-acme-api.azurewebsites.net",
+  "cachPath" : "./cach"
+}
