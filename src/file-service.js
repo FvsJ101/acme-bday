@@ -18,6 +18,16 @@ class FileServices
          });
      }
 
+     readFile(file) {
+         return this.fs.readFileSync(file, 'utf8');
+     }
+
+     writeToFile(file, data) {
+         this.fs.writeFile(file, data, (err) => {
+             if (err) throw err;
+         });
+     }
+
 }
 
 module.exports = FileServices;

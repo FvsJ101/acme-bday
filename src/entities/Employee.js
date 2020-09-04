@@ -1,11 +1,14 @@
-function Employee(firstName, lastName, dateOfBirth, email, startDate, endDate) {
+function Employee(id, firstName, lastName, dateOfBirth, email, startDate, endDate) {
+
     return {
+        id: id,
         name: firstName,
         lastname: lastName,
         dateOfBirth: dateOfBirth,
         email: email,
         startDate: startDate,
-        endDate: endDate
+        endDate: endDate,
+        bdayToday: false
     }
 }
 
