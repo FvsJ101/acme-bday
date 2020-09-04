@@ -73,6 +73,13 @@ class ApiService {
         let currDay = date.getDate();
         let currMonth = date.getMonth() + 1;
 
+        let Isbeday = (empDay === currDay && empMonth === currMonth)
+
+        // leap year test
+        if (empDay == 29 && currMonth == 2 && currDay == 28) {
+            Isbeday = true
+        }
+
         return Employee(
             empDetails.id,
             empDetails.name,
@@ -81,7 +88,7 @@ class ApiService {
             (empDetails.hasOwnProperty("email"))? empDetails.email : "",
             empDetails.employmentStartDate,
             empDetails.employmentEndDate,
-            (empDay === currDay && empMonth === currMonth)
+            Isbeday
         );
     }
 

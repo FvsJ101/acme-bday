@@ -56,6 +56,7 @@ class BirthdayService
 
                 console.log( new Email('Happy B-day', "happy b-day " + employee.name + " " + employee.lastname, employee.email));
             }
+
         });
 
         if (!counter) {
